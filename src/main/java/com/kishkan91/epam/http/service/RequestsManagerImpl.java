@@ -20,7 +20,6 @@ public class RequestsManagerImpl implements RequestsManager {
         } else {
             HttpResponse<String> response = Unirest.request(params.getMethod(), params.getUrl())
                     .headers(params.getHeaders())
-                    .queryString(params.getRequestParameters())
                     .body(params.getJson())
                     .asString();
 
